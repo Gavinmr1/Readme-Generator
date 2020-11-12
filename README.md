@@ -1,7 +1,4 @@
 # README.md Generator
-  (https://img.shields.io/npm/v/npm/Gavinmr1/Readme-Generator?style=flat&logo=appveyor)
-  (https://img.shields.io/github/languages/top/Gavinmr1/Readme-Generator?style=flat&logo=appveyor)
-  (https://img.shields.io/github/last-commit/Gavinmr1/Readme-Generator?style=flat&logo=appveyor)
 
   ## Description 
   
