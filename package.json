@@ -1,0 +1,15 @@
+{
+  "name": "readme-generator",
+  "version": "1.0.0",
+  "description": "README generator created by user entries in the terminal.",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "Gavin Riggs",
+  "license": "ISC",
+  "dependencies": {
+    "axios": "^0.19.0",
+    "inquirer": "^6.5.2"
+  }
+}
