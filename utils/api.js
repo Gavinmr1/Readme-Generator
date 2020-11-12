@@ -1,3 +1,4 @@
+//pulls user info from github
 const axios = require('axios');
 const api = {
   async getUser(responses) {

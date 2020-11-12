@@ -1,9 +1,10 @@
+//modules and packages
 const inquirer = require('inquirer');
 const fs = require('fs');
 const util = require('util');
 const api = require('./utils/api.js');
 const generateMarkdown = require('./utils/generateMarkdown.js');
-
+//questions for user responses
 const questions = [
     {
         type: 'input',
@@ -92,16 +93,16 @@ function writeToFile(fileName, data) {
 const writeFileAsync = util.promisify(writeToFile);
 
 async function init() {
-    try {
+    try {//prompt questions
         const userResponses = await inquirer.prompt(questions);
         console.log("Your responses: ", userResponses);
-
+        //calls github info
         const userInfo = await api.getUser(userResponses);
         console.log("Your GitHub user info: ", userInfo);
-
+        //info passed into markdown
         const markdown = generateMarkdown(userResponses, userInfo);
         console.log(markdown);
-
+        //generate example
         await writeFileAsync('ExampleREADME.md', markdown);
 
     } catch (error) {

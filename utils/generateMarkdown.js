@@ -1,4 +1,5 @@
 function generateMarkdown(responses, info) {
+  //table of contents
   let genCont = `## Table of Contents`;
   if (responses.installation !== '') {
     genCont += `
@@ -12,22 +13,19 @@ function generateMarkdown(responses, info) {
   if (responses.tests !== '') {
     genCont += `
     * [Tests](#tests)` };
-
+    //generate markdown for readme
   let genMarkdown =
     `# ${responses.title}
-  (https://img.shields.io/npm/v/npm/${responses.username}/${responses.repo}?style=flat)
-  (https://img.shields.io/github/languages/top/${responses.username}/${responses.repo}?style=flat)
-  (https://img.shields.io/github/last-commit/${responses.username}/${responses.repo}?style=flat)
- 
+
   ## Description 
   
   ${responses.description}
-  `
+  `//add table of contents
   genMarkdown += genCont;
-
+//add license section
   genMarkdown += `
   * [License](#license)`;
-
+//add install section
   if (responses.installation !== '') {
     genMarkdown +=
       `
@@ -38,7 +36,7 @@ function generateMarkdown(responses, info) {
   
   ${responses.installation}`
   };
-
+//add usage section
   if (responses.usage !== '') {
     genMarkdown +=
       `
@@ -49,7 +47,7 @@ function generateMarkdown(responses, info) {
   
   ${responses.usage}`
   };
-
+//add contribution section
   if (responses.contributing !== '') {
     `
   
@@ -59,7 +57,7 @@ function generateMarkdown(responses, info) {
   
   ${responses.contributing}`
   };
-
+//add test section
   if (responses.tests !== '') {
     genMarkdown +=
       `
@@ -78,7 +76,7 @@ function generateMarkdown(responses, info) {
   
   ${responses.license}
   `;
-
+//question section
   let genAbout =
     `
   ---
